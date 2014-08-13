@@ -1,0 +1,11 @@
+C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\bin\Debug\Bidikmisioffline.exe
+C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\bin\Debug\Bidikmisioffline.pdb
+C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.csprojResolveAssemblyReference.cache
+C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.LoginSekolah.resources
+C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.Properties.Resources.resources
+C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.csproj.GenerateResource.Cache
+C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.exe
+C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.pdb
+C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.IsianSekolah.resources
+C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.IsianSiswa.resources
+C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.Data_Siswa.resources
