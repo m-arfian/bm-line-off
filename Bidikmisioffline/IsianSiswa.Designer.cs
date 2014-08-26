@@ -102,7 +102,7 @@
             this.tc_siswa.Name = "tc_siswa";
             this.tc_siswa.SelectedIndex = 0;
             this.tc_siswa.Size = new System.Drawing.Size(734, 364);
-            this.tc_siswa.TabIndex = 15;
+            this.tc_siswa.TabIndex = 16;
             this.tc_siswa.TabStop = false;
             // 
             // tp_biodata
@@ -215,7 +215,7 @@
             this.tp_akademik.Location = new System.Drawing.Point(4, 23);
             this.tp_akademik.Name = "tp_akademik";
             this.tp_akademik.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_akademik.Size = new System.Drawing.Size(726, 337);
+            this.tp_akademik.Size = new System.Drawing.Size(726, 413);
             this.tp_akademik.TabIndex = 1;
             this.tp_akademik.Text = "Akademik";
             this.tp_akademik.UseVisualStyleBackColor = true;
@@ -226,7 +226,7 @@
             this.tp_prestasi.Location = new System.Drawing.Point(4, 23);
             this.tp_prestasi.Name = "tp_prestasi";
             this.tp_prestasi.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_prestasi.Size = new System.Drawing.Size(726, 337);
+            this.tp_prestasi.Size = new System.Drawing.Size(726, 413);
             this.tp_prestasi.TabIndex = 2;
             this.tp_prestasi.Text = "Prestasi";
             this.tp_prestasi.UseVisualStyleBackColor = true;
@@ -237,7 +237,7 @@
             this.tp_keluarga.Location = new System.Drawing.Point(4, 23);
             this.tp_keluarga.Name = "tp_keluarga";
             this.tp_keluarga.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_keluarga.Size = new System.Drawing.Size(726, 337);
+            this.tp_keluarga.Size = new System.Drawing.Size(726, 413);
             this.tp_keluarga.TabIndex = 3;
             this.tp_keluarga.Text = "Keluarga";
             this.tp_keluarga.UseVisualStyleBackColor = true;
@@ -248,7 +248,7 @@
             this.tp_rumah.Location = new System.Drawing.Point(4, 23);
             this.tp_rumah.Name = "tp_rumah";
             this.tp_rumah.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_rumah.Size = new System.Drawing.Size(726, 337);
+            this.tp_rumah.Size = new System.Drawing.Size(726, 413);
             this.tp_rumah.TabIndex = 4;
             this.tp_rumah.Text = "Rumah";
             this.tp_rumah.UseVisualStyleBackColor = true;
@@ -259,7 +259,7 @@
             this.tp_aset.Location = new System.Drawing.Point(4, 23);
             this.tp_aset.Name = "tp_aset";
             this.tp_aset.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_aset.Size = new System.Drawing.Size(726, 337);
+            this.tp_aset.Size = new System.Drawing.Size(726, 413);
             this.tp_aset.TabIndex = 5;
             this.tp_aset.Text = "Aset";
             this.tp_aset.UseVisualStyleBackColor = true;
@@ -270,7 +270,7 @@
             this.tp_ekonomi.Location = new System.Drawing.Point(4, 23);
             this.tp_ekonomi.Name = "tp_ekonomi";
             this.tp_ekonomi.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_ekonomi.Size = new System.Drawing.Size(726, 337);
+            this.tp_ekonomi.Size = new System.Drawing.Size(726, 413);
             this.tp_ekonomi.TabIndex = 6;
             this.tp_ekonomi.Text = "Ekonomi";
             this.tp_ekonomi.UseVisualStyleBackColor = true;
@@ -281,7 +281,7 @@
             this.tp_seleksi.Location = new System.Drawing.Point(4, 23);
             this.tp_seleksi.Name = "tp_seleksi";
             this.tp_seleksi.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_seleksi.Size = new System.Drawing.Size(726, 337);
+            this.tp_seleksi.Size = new System.Drawing.Size(726, 413);
             this.tp_seleksi.TabIndex = 7;
             this.tp_seleksi.Text = "Seleksi";
             this.tp_seleksi.UseVisualStyleBackColor = true;

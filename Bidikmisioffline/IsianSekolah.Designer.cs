@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_npsn = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,15 +58,22 @@
             this.rd_akreditasi_b = new System.Windows.Forms.RadioButton();
             this.rd_akreditasi_c = new System.Windows.Forms.RadioButton();
             this.rd_akreditasi_a = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_jenis = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.rd_sekolah_pkbm = new System.Windows.Forms.RadioButton();
             this.rd_sekolah_mak = new System.Windows.Forms.RadioButton();
             this.rd_sekolah_ma = new System.Windows.Forms.RadioButton();
             this.rd_sekolah_smk = new System.Windows.Forms.RadioButton();
             this.rd_sekolah_sma = new System.Windows.Forms.RadioButton();
+            this.err_isiansekolah = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pnl_status = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.rd_pemerintah = new System.Windows.Forms.RadioButton();
+            this.rd_masyarakat = new System.Windows.Forms.RadioButton();
             this.pnl_akreditasi.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnl_jenis.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.err_isiansekolah)).BeginInit();
+            this.pnl_status.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -80,9 +88,11 @@
             // txt_npsn
             // 
             this.txt_npsn.Location = new System.Drawing.Point(160, 28);
+            this.txt_npsn.MaxLength = 8;
             this.txt_npsn.Name = "txt_npsn";
             this.txt_npsn.Size = new System.Drawing.Size(100, 20);
             this.txt_npsn.TabIndex = 1;
+            this.txt_npsn.Validating += new System.ComponentModel.CancelEventHandler(this.txt_npsn_Validating);
             // 
             // label2
             // 
@@ -96,9 +106,11 @@
             // txt_namasekolah
             // 
             this.txt_namasekolah.Location = new System.Drawing.Point(160, 59);
+            this.txt_namasekolah.MaxLength = 50;
             this.txt_namasekolah.Name = "txt_namasekolah";
             this.txt_namasekolah.Size = new System.Drawing.Size(185, 20);
             this.txt_namasekolah.TabIndex = 3;
+            this.txt_namasekolah.Validating += new System.ComponentModel.CancelEventHandler(this.txt_namasekolah_Validating);
             // 
             // label3
             // 
@@ -116,6 +128,7 @@
             this.txt_alamatsekolah.Name = "txt_alamatsekolah";
             this.txt_alamatsekolah.Size = new System.Drawing.Size(185, 62);
             this.txt_alamatsekolah.TabIndex = 5;
+            this.txt_alamatsekolah.Validating += new System.ComponentModel.CancelEventHandler(this.txt_alamatsekolah_Validating);
             // 
             // label4
             // 
@@ -131,8 +144,10 @@
             this.cmb_provinsi.FormattingEnabled = true;
             this.cmb_provinsi.Location = new System.Drawing.Point(160, 169);
             this.cmb_provinsi.Name = "cmb_provinsi";
-            this.cmb_provinsi.Size = new System.Drawing.Size(133, 21);
+            this.cmb_provinsi.Size = new System.Drawing.Size(165, 21);
             this.cmb_provinsi.TabIndex = 7;
+            this.cmb_provinsi.SelectionChangeCommitted += new System.EventHandler(this.cmb_provinsi_SelectionChangeCommitted);
+            this.cmb_provinsi.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_provinsi_Validating);
             // 
             // label5
             // 
@@ -145,11 +160,13 @@
             // 
             // cmb_kota
             // 
+            this.cmb_kota.Enabled = false;
             this.cmb_kota.FormattingEnabled = true;
             this.cmb_kota.Location = new System.Drawing.Point(160, 205);
             this.cmb_kota.Name = "cmb_kota";
             this.cmb_kota.Size = new System.Drawing.Size(149, 21);
             this.cmb_kota.TabIndex = 9;
+            this.cmb_kota.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_kota_Validating);
             // 
             // label6
             // 
@@ -163,6 +180,7 @@
             // txt_email
             // 
             this.txt_email.Location = new System.Drawing.Point(160, 241);
+            this.txt_email.MaxLength = 50;
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(165, 20);
             this.txt_email.TabIndex = 11;
@@ -179,6 +197,7 @@
             // txt_telpsekolah
             // 
             this.txt_telpsekolah.Location = new System.Drawing.Point(160, 282);
+            this.txt_telpsekolah.MaxLength = 20;
             this.txt_telpsekolah.Name = "txt_telpsekolah";
             this.txt_telpsekolah.Size = new System.Drawing.Size(115, 20);
             this.txt_telpsekolah.TabIndex = 13;
@@ -195,6 +214,7 @@
             // txt_namakepsek
             // 
             this.txt_namakepsek.Location = new System.Drawing.Point(160, 325);
+            this.txt_namakepsek.MaxLength = 30;
             this.txt_namakepsek.Name = "txt_namakepsek";
             this.txt_namakepsek.Size = new System.Drawing.Size(149, 20);
             this.txt_namakepsek.TabIndex = 15;
@@ -202,7 +222,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(384, 25);
+            this.label9.Location = new System.Drawing.Point(25, 365);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(110, 13);
             this.label9.TabIndex = 16;
@@ -210,7 +230,8 @@
             // 
             // txt_emailkepsek
             // 
-            this.txt_emailkepsek.Location = new System.Drawing.Point(519, 25);
+            this.txt_emailkepsek.Location = new System.Drawing.Point(160, 365);
+            this.txt_emailkepsek.MaxLength = 50;
             this.txt_emailkepsek.Name = "txt_emailkepsek";
             this.txt_emailkepsek.Size = new System.Drawing.Size(165, 20);
             this.txt_emailkepsek.TabIndex = 17;
@@ -218,7 +239,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(384, 62);
+            this.label10.Location = new System.Drawing.Point(25, 406);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(123, 13);
             this.label10.TabIndex = 18;
@@ -226,7 +247,8 @@
             // 
             // txt_telpkepsek
             // 
-            this.txt_telpkepsek.Location = new System.Drawing.Point(519, 62);
+            this.txt_telpkepsek.Location = new System.Drawing.Point(160, 406);
+            this.txt_telpkepsek.MaxLength = 12;
             this.txt_telpkepsek.Name = "txt_telpkepsek";
             this.txt_telpkepsek.Size = new System.Drawing.Size(115, 20);
             this.txt_telpkepsek.TabIndex = 19;
@@ -234,7 +256,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(384, 202);
+            this.label12.Location = new System.Drawing.Point(384, 142);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(76, 13);
             this.label12.TabIndex = 25;
@@ -242,19 +264,21 @@
             // 
             // txt_nilaiakreditasi
             // 
-            this.txt_nilaiakreditasi.Location = new System.Drawing.Point(519, 202);
+            this.txt_nilaiakreditasi.Location = new System.Drawing.Point(519, 142);
+            this.txt_nilaiakreditasi.MaxLength = 10;
             this.txt_nilaiakreditasi.Name = "txt_nilaiakreditasi";
             this.txt_nilaiakreditasi.Size = new System.Drawing.Size(69, 20);
             this.txt_nilaiakreditasi.TabIndex = 26;
             // 
             // btn_simpan
             // 
-            this.btn_simpan.Location = new System.Drawing.Point(28, 375);
+            this.btn_simpan.Location = new System.Drawing.Point(604, 406);
             this.btn_simpan.Name = "btn_simpan";
             this.btn_simpan.Size = new System.Drawing.Size(91, 34);
             this.btn_simpan.TabIndex = 33;
             this.btn_simpan.Text = "Simpan";
             this.btn_simpan.UseVisualStyleBackColor = true;
+            this.btn_simpan.Click += new System.EventHandler(this.btn_simpan_Click);
             // 
             // pnl_akreditasi
             // 
@@ -264,7 +288,7 @@
             this.pnl_akreditasi.Controls.Add(this.rd_akreditasi_b);
             this.pnl_akreditasi.Controls.Add(this.rd_akreditasi_c);
             this.pnl_akreditasi.Controls.Add(this.rd_akreditasi_a);
-            this.pnl_akreditasi.Location = new System.Drawing.Point(381, 88);
+            this.pnl_akreditasi.Location = new System.Drawing.Point(381, 28);
             this.pnl_akreditasi.Name = "pnl_akreditasi";
             this.pnl_akreditasi.Size = new System.Drawing.Size(314, 107);
             this.pnl_akreditasi.TabIndex = 34;
@@ -281,6 +305,7 @@
             // rd_akreditasi_x
             // 
             this.rd_akreditasi_x.AutoSize = true;
+            this.rd_akreditasi_x.Checked = true;
             this.rd_akreditasi_x.Location = new System.Drawing.Point(138, 78);
             this.rd_akreditasi_x.Name = "rd_akreditasi_x";
             this.rd_akreditasi_x.Size = new System.Drawing.Size(102, 17);
@@ -322,18 +347,18 @@
             this.rd_akreditasi_a.Text = "A";
             this.rd_akreditasi_a.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // pnl_jenis
             // 
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.rd_sekolah_pkbm);
-            this.panel1.Controls.Add(this.rd_sekolah_mak);
-            this.panel1.Controls.Add(this.rd_sekolah_ma);
-            this.panel1.Controls.Add(this.rd_sekolah_smk);
-            this.panel1.Controls.Add(this.rd_sekolah_sma);
-            this.panel1.Location = new System.Drawing.Point(381, 228);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(314, 152);
-            this.panel1.TabIndex = 35;
+            this.pnl_jenis.Controls.Add(this.label13);
+            this.pnl_jenis.Controls.Add(this.rd_sekolah_pkbm);
+            this.pnl_jenis.Controls.Add(this.rd_sekolah_mak);
+            this.pnl_jenis.Controls.Add(this.rd_sekolah_ma);
+            this.pnl_jenis.Controls.Add(this.rd_sekolah_smk);
+            this.pnl_jenis.Controls.Add(this.rd_sekolah_sma);
+            this.pnl_jenis.Location = new System.Drawing.Point(381, 168);
+            this.pnl_jenis.Name = "pnl_jenis";
+            this.pnl_jenis.Size = new System.Drawing.Size(314, 134);
+            this.pnl_jenis.TabIndex = 35;
             // 
             // label13
             // 
@@ -347,6 +372,7 @@
             // rd_sekolah_pkbm
             // 
             this.rd_sekolah_pkbm.AutoSize = true;
+            this.rd_sekolah_pkbm.Checked = true;
             this.rd_sekolah_pkbm.Location = new System.Drawing.Point(138, 107);
             this.rd_sekolah_pkbm.Name = "rd_sekolah_pkbm";
             this.rd_sekolah_pkbm.Size = new System.Drawing.Size(162, 17);
@@ -362,7 +388,6 @@
             this.rd_sekolah_mak.Name = "rd_sekolah_mak";
             this.rd_sekolah_mak.Size = new System.Drawing.Size(48, 17);
             this.rd_sekolah_mak.TabIndex = 36;
-            this.rd_sekolah_mak.TabStop = true;
             this.rd_sekolah_mak.Text = "MAK";
             this.rd_sekolah_mak.UseVisualStyleBackColor = true;
             // 
@@ -373,7 +398,6 @@
             this.rd_sekolah_ma.Name = "rd_sekolah_ma";
             this.rd_sekolah_ma.Size = new System.Drawing.Size(41, 17);
             this.rd_sekolah_ma.TabIndex = 35;
-            this.rd_sekolah_ma.TabStop = true;
             this.rd_sekolah_ma.Text = "MA";
             this.rd_sekolah_ma.UseVisualStyleBackColor = true;
             // 
@@ -384,7 +408,6 @@
             this.rd_sekolah_smk.Name = "rd_sekolah_smk";
             this.rd_sekolah_smk.Size = new System.Drawing.Size(48, 17);
             this.rd_sekolah_smk.TabIndex = 34;
-            this.rd_sekolah_smk.TabStop = true;
             this.rd_sekolah_smk.Text = "SMK";
             this.rd_sekolah_smk.UseVisualStyleBackColor = true;
             // 
@@ -395,16 +418,62 @@
             this.rd_sekolah_sma.Name = "rd_sekolah_sma";
             this.rd_sekolah_sma.Size = new System.Drawing.Size(48, 17);
             this.rd_sekolah_sma.TabIndex = 33;
-            this.rd_sekolah_sma.TabStop = true;
             this.rd_sekolah_sma.Text = "SMA";
             this.rd_sekolah_sma.UseVisualStyleBackColor = true;
+            // 
+            // err_isiansekolah
+            // 
+            this.err_isiansekolah.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.err_isiansekolah.ContainerControl = this;
+            // 
+            // pnl_status
+            // 
+            this.pnl_status.Controls.Add(this.rd_masyarakat);
+            this.pnl_status.Controls.Add(this.rd_pemerintah);
+            this.pnl_status.Controls.Add(this.label14);
+            this.pnl_status.Location = new System.Drawing.Point(381, 308);
+            this.pnl_status.Name = "pnl_status";
+            this.pnl_status.Size = new System.Drawing.Size(314, 60);
+            this.pnl_status.TabIndex = 36;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Status Sekolah";
+            // 
+            // rd_pemerintah
+            // 
+            this.rd_pemerintah.AutoSize = true;
+            this.rd_pemerintah.Location = new System.Drawing.Point(138, 10);
+            this.rd_pemerintah.Name = "rd_pemerintah";
+            this.rd_pemerintah.Size = new System.Drawing.Size(78, 17);
+            this.rd_pemerintah.TabIndex = 1;
+            this.rd_pemerintah.TabStop = true;
+            this.rd_pemerintah.Text = "Pemerintah";
+            this.rd_pemerintah.UseVisualStyleBackColor = true;
+            // 
+            // rd_masyarakat
+            // 
+            this.rd_masyarakat.AutoSize = true;
+            this.rd_masyarakat.Location = new System.Drawing.Point(138, 33);
+            this.rd_masyarakat.Name = "rd_masyarakat";
+            this.rd_masyarakat.Size = new System.Drawing.Size(80, 17);
+            this.rd_masyarakat.TabIndex = 2;
+            this.rd_masyarakat.TabStop = true;
+            this.rd_masyarakat.Text = "Masyarakat";
+            this.rd_masyarakat.UseVisualStyleBackColor = true;
             // 
             // IsianSekolah
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 462);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl_status);
+            this.Controls.Add(this.pnl_jenis);
             this.Controls.Add(this.pnl_akreditasi);
             this.Controls.Add(this.btn_simpan);
             this.Controls.Add(this.txt_nilaiakreditasi);
@@ -431,10 +500,14 @@
             this.Controls.Add(this.label1);
             this.Name = "IsianSekolah";
             this.Text = "IsianSekolah";
+            this.Load += new System.EventHandler(this.IsianSekolah_Load);
             this.pnl_akreditasi.ResumeLayout(false);
             this.pnl_akreditasi.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnl_jenis.ResumeLayout(false);
+            this.pnl_jenis.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.err_isiansekolah)).EndInit();
+            this.pnl_status.ResumeLayout(false);
+            this.pnl_status.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,12 +544,17 @@
         private System.Windows.Forms.RadioButton rd_akreditasi_c;
         private System.Windows.Forms.RadioButton rd_akreditasi_a;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_jenis;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.RadioButton rd_sekolah_pkbm;
         private System.Windows.Forms.RadioButton rd_sekolah_mak;
         private System.Windows.Forms.RadioButton rd_sekolah_ma;
         private System.Windows.Forms.RadioButton rd_sekolah_smk;
         private System.Windows.Forms.RadioButton rd_sekolah_sma;
+        private System.Windows.Forms.ErrorProvider err_isiansekolah;
+        private System.Windows.Forms.Panel pnl_status;
+        private System.Windows.Forms.RadioButton rd_masyarakat;
+        private System.Windows.Forms.RadioButton rd_pemerintah;
+        private System.Windows.Forms.Label label14;
     }
 }

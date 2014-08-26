@@ -50,13 +50,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\Formatter.cs" />
+    <Compile Include="classes\Sekolah.cs" />
+    <Compile Include="classes\SimpleQuery.cs" />
     <Compile Include="classes\SQLiteDatabase.cs" />
-    <Compile Include="Connect.cs" />
+    <Compile Include="classes\Validator.cs" />
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data Siswa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Data Siswa.Designer.cs">
       <DependentUpon>Data Siswa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataPrestasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataPrestasi.Designer.cs">
+      <DependentUpon>DataPrestasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataUnas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataUnas.Designer.cs">
+      <DependentUpon>DataUnas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormHeader.Designer.cs">
+      <DependentUpon>FormHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsianPrestasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsianPrestasi.Designer.cs">
+      <DependentUpon>IsianPrestasi.cs</DependentUpon>
     </Compile>
     <Compile Include="IsianSekolah.cs">
       <SubType>Form</SubType>
@@ -70,17 +103,46 @@
     <Compile Include="IsianSiswa.Designer.cs">
       <DependentUpon>IsianSiswa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs" />
+    <Compile Include="IsianUnas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsianUnas.Designer.cs">
+      <DependentUpon>IsianUnas.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginSekolah.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginSekolah.Designer.cs">
       <DependentUpon>LoginSekolah.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTemplate.Designer.cs">
+      <DependentUpon>FormTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pralogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pralogin.Designer.cs">
+      <DependentUpon>Pralogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data Siswa.resx">
       <DependentUpon>Data Siswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataPrestasi.resx">
+      <DependentUpon>DataPrestasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataUnas.resx">
+      <DependentUpon>DataUnas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsianPrestasi.resx">
+      <DependentUpon>IsianPrestasi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IsianSekolah.resx">
       <DependentUpon>IsianSekolah.cs</DependentUpon>
@@ -88,8 +150,17 @@
     <EmbeddedResource Include="IsianSiswa.resx">
       <DependentUpon>IsianSiswa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IsianUnas.resx">
+      <DependentUpon>IsianUnas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginSekolah.resx">
       <DependentUpon>LoginSekolah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTemplate.resx">
+      <DependentUpon>FormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pralogin.resx">
+      <DependentUpon>Pralogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,7 +172,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="database\bdkmsoffline.db" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

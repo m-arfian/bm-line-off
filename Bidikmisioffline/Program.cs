@@ -18,16 +18,16 @@ namespace Bidikmisioffline
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            try {
-                SQLiteDatabase sqldb = new SQLiteDatabase();
-
-                SQLiteCommand cmd = new SQLiteCommand();
-                SQLiteDataReader dr;
-
-                Application.Run(new Data_Siswa());
+            try
+            {
+                if (Sekolah.cek_data_ada())
+                    Application.Run(new IsianSekolah());
+                else
+                    Application.Run(new LoginSekolah());
             }
-            catch (Exception e) {
-                MessageBox.Show(e.Message, "Connection Error",
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error",
                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 

@@ -15,7 +15,7 @@ namespace Bidikmisioffline.classes
         /// </summary>
         public SQLiteDatabase()
         {
-            dbConnection = "Data Source=bdkmsoffline.db";
+            dbConnection = "Data Source=database/bdkmsoffline.db";
         }
 
         /// <summary>

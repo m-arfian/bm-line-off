@@ -11,15 +11,28 @@ namespace Bidikmisioffline
 {
     public partial class Data_Siswa : Form
     {
+        private Dashboard dash;
+
         public Data_Siswa()
         {
             InitializeComponent();
         }
 
+        public Data_Siswa(Dashboard d)
+        {
+            InitializeComponent();
+            this.dash = d;
+        }
+
         private void btn_newsiswa_Click(object sender, EventArgs e)
         {
             IsianSiswa isis = new IsianSiswa();
-            isis.ShowDialog();
+            DialogResult dr = isis.ShowDialog();
+        }
+
+        private void Data_Siswa_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.dash.Show();
         }
     }
 }
