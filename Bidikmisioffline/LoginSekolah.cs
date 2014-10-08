@@ -31,7 +31,7 @@ namespace Bidikmisioffline
             {
                 this.Hide();
 
-                Dashboard d = new Dashboard();
+                Dashboard d = new Dashboard(text_npsn.Text);
                 d.Show();
             }
 

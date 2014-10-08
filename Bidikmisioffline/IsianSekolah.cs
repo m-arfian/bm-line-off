@@ -22,8 +22,6 @@ namespace Bidikmisioffline
             cmb_provinsi.DataSource = SimpleQuery.get_provinsi();
             cmb_provinsi.DisplayMember = "NAMA_PROVINSI";
             cmb_provinsi.ValueMember = "KODE_PROVINSI";
-
-
         }
 
         private void btn_simpan_Click(object sender, EventArgs e)
@@ -52,7 +50,7 @@ namespace Bidikmisioffline
                 try
                 {
                     db.Insert("slta", data);
-                    MessageBox.Show("Data sekolah berhasil disimpan", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Data sekolah berhasil disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
 
                     Pralogin pl = new Pralogin(kodeakses);

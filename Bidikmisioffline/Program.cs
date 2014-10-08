@@ -9,6 +9,9 @@ namespace Bidikmisioffline
 {
     static class Program
     {
+        public static int TAHUN = 2014;
+        public static int INISIAL_NO_PEND = 12;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

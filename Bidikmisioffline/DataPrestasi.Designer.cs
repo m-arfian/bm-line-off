@@ -45,18 +45,16 @@
             // 
             // list_prestasi
             // 
-            this.list_prestasi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.list_prestasi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.col_kegiatan,
             this.col_jenis,
             this.col_tingkat,
             this.col_tahun,
             this.col_pencapaian});
+            this.list_prestasi.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.list_prestasi.FullRowSelect = true;
             this.list_prestasi.GridLines = true;
-            this.list_prestasi.Location = new System.Drawing.Point(0, 28);
+            this.list_prestasi.Location = new System.Drawing.Point(0, 29);
             this.list_prestasi.Name = "list_prestasi";
             this.list_prestasi.Size = new System.Drawing.Size(734, 433);
             this.list_prestasi.TabIndex = 3;
@@ -140,12 +138,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(734, 462);
+            this.ControlBox = false;
             this.Controls.Add(this.ts_datasiswa);
             this.Controls.Add(this.list_prestasi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DataPrestasi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data Prestasi Sekolah";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DataPrestasi_FormClosing);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ts_datasiswa.ResumeLayout(false);
             this.ts_datasiswa.PerformLayout();
             this.ResumeLayout(false);

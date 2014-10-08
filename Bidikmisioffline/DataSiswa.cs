@@ -6,19 +6,20 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Bidikmisioffline.classes;
 
 namespace Bidikmisioffline
 {
-    public partial class Data_Siswa : Form
+    public partial class DataSiswa : Form
     {
         private Dashboard dash;
 
-        public Data_Siswa()
+        public DataSiswa()
         {
             InitializeComponent();
         }
 
-        public Data_Siswa(Dashboard d)
+        public DataSiswa(Dashboard d)
         {
             InitializeComponent();
             this.dash = d;
@@ -26,7 +27,7 @@ namespace Bidikmisioffline
 
         private void btn_newsiswa_Click(object sender, EventArgs e)
         {
-            IsianSiswa isis = new IsianSiswa();
+            IsianSiswa isis = new IsianSiswa(Siswa.DATA_BARU);
             DialogResult dr = isis.ShowDialog();
         }
 

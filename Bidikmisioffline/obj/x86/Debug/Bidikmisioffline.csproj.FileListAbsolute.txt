@@ -8,12 +8,11 @@ C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisi
 C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.pdb
 C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.IsianSekolah.resources
 C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.IsianSiswa.resources
-C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.Data_Siswa.resources
 C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.Pralogin.resources
 C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.Dashboard.resources
 C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.DataPrestasi.resources
 C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.DataUnas.resources
 C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.IsianPrestasi.resources
 C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.IsianUnas.resources
-C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.PanelDataList.resources
 C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.FormTemplate.resources
+C:\Users\Arfian\Documents\Visual Studio 2010\Projects\Bidikmisioffline\Bidikmisioffline\obj\x86\Debug\Bidikmisioffline.DataSiswa.resources

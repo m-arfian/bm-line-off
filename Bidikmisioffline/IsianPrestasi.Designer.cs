@@ -48,9 +48,9 @@
             this.rd_grup = new System.Windows.Forms.RadioButton();
             this.rd_individual = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_tahun = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_kegiatan = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.err_isianprestasi = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnl_header = new System.Windows.Forms.Panel();
@@ -77,9 +77,9 @@
             this.group_form.Controls.Add(this.pnl_pencapaian);
             this.group_form.Controls.Add(this.pnl_tingkat);
             this.group_form.Controls.Add(this.pnl_jenis);
-            this.group_form.Controls.Add(this.textBox2);
+            this.group_form.Controls.Add(this.txt_tahun);
             this.group_form.Controls.Add(this.label2);
-            this.group_form.Controls.Add(this.textBox1);
+            this.group_form.Controls.Add(this.txt_kegiatan);
             this.group_form.Controls.Add(this.label1);
             this.group_form.Dock = System.Windows.Forms.DockStyle.Fill;
             this.group_form.Location = new System.Drawing.Point(0, 0);
@@ -227,6 +227,7 @@
             this.pnl_jenis.Name = "pnl_jenis";
             this.pnl_jenis.Size = new System.Drawing.Size(308, 76);
             this.pnl_jenis.TabIndex = 5;
+            this.pnl_jenis.Validating += new System.ComponentModel.CancelEventHandler(this.pnl_jenis_Validating);
             // 
             // rd_lainnya
             // 
@@ -270,13 +271,14 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Jenis";
             // 
-            // textBox2
+            // txt_tahun
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 65);
-            this.textBox2.MaxLength = 4;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(64, 20);
-            this.textBox2.TabIndex = 3;
+            this.txt_tahun.Location = new System.Drawing.Point(144, 65);
+            this.txt_tahun.MaxLength = 4;
+            this.txt_tahun.Name = "txt_tahun";
+            this.txt_tahun.Size = new System.Drawing.Size(64, 20);
+            this.txt_tahun.TabIndex = 3;
+            this.txt_tahun.Validating += new System.ComponentModel.CancelEventHandler(this.txt_tahun_Validating);
             // 
             // label2
             // 
@@ -287,12 +289,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Tahun";
             // 
-            // textBox1
+            // txt_kegiatan
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 1;
+            this.txt_kegiatan.Location = new System.Drawing.Point(144, 34);
+            this.txt_kegiatan.Name = "txt_kegiatan";
+            this.txt_kegiatan.Size = new System.Drawing.Size(166, 20);
+            this.txt_kegiatan.TabIndex = 1;
+            this.txt_kegiatan.Validating += new System.ComponentModel.CancelEventHandler(this.txt_kegiatan_Validating);
             // 
             // label1
             // 
@@ -324,7 +327,9 @@
             this.Controls.Add(this.pnl_form);
             this.Controls.Add(this.pnl_header);
             this.Name = "IsianPrestasi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IsianPrestasi";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IsianPrestasi_FormClosing);
             this.pnl_form.ResumeLayout(false);
             this.group_form.ResumeLayout(false);
             this.group_form.PerformLayout();
@@ -344,9 +349,9 @@
         private System.Windows.Forms.Panel pnl_form;
         private System.Windows.Forms.GroupBox group_form;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_tahun;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_kegiatan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel pnl_jenis;
         private System.Windows.Forms.RadioButton rd_lainnya;

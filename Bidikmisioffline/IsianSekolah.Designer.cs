@@ -67,9 +67,9 @@
             this.rd_sekolah_sma = new System.Windows.Forms.RadioButton();
             this.err_isiansekolah = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnl_status = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.rd_pemerintah = new System.Windows.Forms.RadioButton();
             this.rd_masyarakat = new System.Windows.Forms.RadioButton();
+            this.rd_pemerintah = new System.Windows.Forms.RadioButton();
+            this.label14 = new System.Windows.Forms.Label();
             this.pnl_akreditasi.SuspendLayout();
             this.pnl_jenis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.err_isiansekolah)).BeginInit();
@@ -166,6 +166,7 @@
             this.cmb_kota.Name = "cmb_kota";
             this.cmb_kota.Size = new System.Drawing.Size(149, 21);
             this.cmb_kota.TabIndex = 9;
+            this.cmb_kota.Text = "Pilih kota";
             this.cmb_kota.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_kota_Validating);
             // 
             // label6
@@ -436,14 +437,16 @@
             this.pnl_status.Size = new System.Drawing.Size(314, 60);
             this.pnl_status.TabIndex = 36;
             // 
-            // label14
+            // rd_masyarakat
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 10);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 13);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Status Sekolah";
+            this.rd_masyarakat.AutoSize = true;
+            this.rd_masyarakat.Location = new System.Drawing.Point(138, 33);
+            this.rd_masyarakat.Name = "rd_masyarakat";
+            this.rd_masyarakat.Size = new System.Drawing.Size(80, 17);
+            this.rd_masyarakat.TabIndex = 2;
+            this.rd_masyarakat.TabStop = true;
+            this.rd_masyarakat.Text = "Masyarakat";
+            this.rd_masyarakat.UseVisualStyleBackColor = true;
             // 
             // rd_pemerintah
             // 
@@ -456,16 +459,14 @@
             this.rd_pemerintah.Text = "Pemerintah";
             this.rd_pemerintah.UseVisualStyleBackColor = true;
             // 
-            // rd_masyarakat
+            // label14
             // 
-            this.rd_masyarakat.AutoSize = true;
-            this.rd_masyarakat.Location = new System.Drawing.Point(138, 33);
-            this.rd_masyarakat.Name = "rd_masyarakat";
-            this.rd_masyarakat.Size = new System.Drawing.Size(80, 17);
-            this.rd_masyarakat.TabIndex = 2;
-            this.rd_masyarakat.TabStop = true;
-            this.rd_masyarakat.Text = "Masyarakat";
-            this.rd_masyarakat.UseVisualStyleBackColor = true;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Status Sekolah";
             // 
             // IsianSekolah
             // 
@@ -499,6 +500,7 @@
             this.Controls.Add(this.txt_npsn);
             this.Controls.Add(this.label1);
             this.Name = "IsianSekolah";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IsianSekolah";
             this.Load += new System.EventHandler(this.IsianSekolah_Load);
             this.pnl_akreditasi.ResumeLayout(false);

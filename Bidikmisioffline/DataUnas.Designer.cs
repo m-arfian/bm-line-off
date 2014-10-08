@@ -98,7 +98,6 @@
             // 
             // list_unas
             // 
-            this.list_unas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.list_unas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.col_tahunajaran,
             this.col_nilaiipa,
@@ -109,6 +108,7 @@
             this.col_pelajaranbahasa,
             this.col_nilaismk,
             this.col_pelajaransmk});
+            this.list_unas.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.list_unas.FullRowSelect = true;
             this.list_unas.GridLines = true;
             this.list_unas.Location = new System.Drawing.Point(0, 28);
@@ -168,11 +168,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(734, 462);
+            this.ControlBox = false;
             this.Controls.Add(this.ts_datasiswa);
             this.Controls.Add(this.list_unas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DataUnas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DataUnas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ts_datasiswa.ResumeLayout(false);
             this.ts_datasiswa.PerformLayout();
             this.ResumeLayout(false);

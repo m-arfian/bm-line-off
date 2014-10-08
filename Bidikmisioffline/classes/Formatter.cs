@@ -32,6 +32,12 @@ namespace Bidikmisioffline.classes
             return sBuilder.ToString();
         }
 
+        public static string GetTimeStamp()
+        {
+            var timeSpan = (DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0));
+            return timeSpan.TotalSeconds.ToString();
+        }
+
         public static void SetTextError(System.Windows.Forms.TextBox txt)
         {
             txt.BackColor = ERR_COLOR;

@@ -95,7 +95,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.text_kodeakses);
             this.Controls.Add(this.text_npsn);
+            this.MaximizeBox = false;
             this.Name = "LoginSekolah";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Sekolah";
             this.ResumeLayout(false);
             this.PerformLayout();
